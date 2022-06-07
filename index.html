@@ -50,11 +50,12 @@
         </nav>
     </div>
     <div>
-        <div class="search">
-            <input type="text" placeholder="Search for Title, Artist, Album...">
-            <input type="button" class ="subsearch" value="Submit">
-        </div>
+        <form onsubmit='return searchSpotify();' class="search">
+            <input type="text" id='q' placeholder="Search for Title, Artist, Album...">
+            <input type="submit" id='submit' class ="subsearch" value="Submit">
+        </form>
     </div>
+    <div id="'returnobj"></div>
 Content goes here.
     <script src="scripts.mjs"></script>
 </body>

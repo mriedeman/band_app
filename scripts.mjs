@@ -1,15 +1,16 @@
 
-import fetch from "node-fetch";
+//import fetch from "node-fetch";
 
 // API Request
 const baseUrl = "https://api.spotify.com/v1/search"
-const client_id =  "341fde6de8e2491b936ed1bdc8010c6a"
-const client_secret =  "b25f4e507c6646e4a3f73d6149cb4446"
-const o_auth_token = "BQC_i-TkCPC1dwtYebV4clsPWndb8CtgVX5iX1n90iHm_beofsn6GCQHoWEHheAJum7G1EH-S2SdlSR1IQcsYFzmL-Bj2tovKQ3iuJOc1AnJvwVQMXuaX3hsvgLfXY9JtHL_tLGXbqhX0kmizzMfUFVP4EzP8jtm8sre4Eq1oviwQ3STM9NiwjxSxrZR7dBUPntFTynOHi7-k3q0WPGZ6I-_pleGXwD_vK_fXJUGDJWzdYZfygAR-DJHMdxHxtU4"
-const q = "?artist:Miles%20Davis"
+const client_id =  "5b8013e54ebe466aab72a2354151f986"
+const client_secret =  "33ee9792e8c34cae9688ef7000d1ab79"
+const o_auth_token = "BQBYgS81GbbbSA8CrdbeUwN1Rm1ctJVqFRLfy3dxV0bzCehNRdP6GiGtFVbv_yiLmFoyS5PF9nVDTjV1RPw-sqFcoPHaGUhFKZquo04PJwCK9CAybn4HFn_a4vPznH1g9p2G2S1wBKoWssV2"
+let qu = '?q=miles' /*document.getElementById("q")*/ 
 const type = "&type=artist"
-const request_url = baseUrl + q + type
+const request_url = baseUrl + qu + type
 
+//function searchSpotify(){ //NOT SURE WHY IT DOESN"T WORK WHEN CALLED WITHIN A FUNCTION LOOKS LIKE THE PAGE REFRESHES... FOR SOME REASON THIS JUST RUNS WHEN YOU HIT SUBMIT even though it should run "searchSpotify"
 fetch(request_url,
   {
     //method: 'POST',
@@ -30,6 +31,7 @@ fetch(request_url,
       .catch(function (err) {
         console.log("Something went wrong!", err);
     });
+  //};
 
 
   // fetch('https://api.spotify.com/v1/artists/21E3waRsmPlU7jZsS13rcj', {
